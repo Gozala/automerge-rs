@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "collaborators": [
     "Orion Henry <orion@inkandswitch.com>",
     "Alex Good <alex@memoryandthought.me>"
@@ -17,9 +18,9 @@
   ],
   "main": "./index.js",
   "scripts": {
-    "build": "rm -rf pkg && wasm-pack build --target nodejs --dev --out-name index",
-    "release": "rm -rf pkg && wasm-pack build --target nodejs --release --out-name index",
-    "profiling": "rm -rf pkg && wasm-pack build --target nodejs --profiling --out-name index",
+    "build": "rm -rf pkg && wasm-pack build --target browser --dev --out-name index",
+    "release": "rm -rf pkg && wasm-pack build --target browser --release --out-name index",
+    "profiling": "rm -rf pkg && wasm-pack build --target browser --profiling --out-name index",
     "mocha": "yarn build && mocha --bail --full-trace",
     "webpack": "webpack",
     "test": "cargo test && wasm-pack test --node"
